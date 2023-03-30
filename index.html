@@ -24,87 +24,88 @@
         function hideMenu(){
             navLinks.style.right="-200px";
         }
-        
+
 
     </script>
-
     <!--campus-->
     
     <!--facilidades-->
     <section class="facilities" id="facilities">
-            <h1>E-book PLR </h1>
-                <p>Tudo que todas as pessoas precisam estudar para desenvolver suas habilidades de liderança e desenvolvimento pessoal, para que possam alcançar seus objetivos pessoais e profissionais</p>
-             <div class="row">
-                 <div class="facilities-col">
-                     <img src="plr.png">
-                   
-                 </div>
-                
+        <h1>E-book Google ADS </h1>
+            <p>Tudo que todas as pessoas precisam saber sobre Anúncios no Google se tornando um especialista em Google ADS </p>
+         <div class="row">
+             <div class="facilities-col">
+                 <img src="google.png">
+               
              </div>
+            
+         </div>
     </section>
-        
-        
+    
+    
     <!---footer-->
     <section class="footer" id="fooder">
-            <div id="smart-button-container">
-                <div style="text-align: center;">
-                  <div id="paypal-button-container"></div>
-                </div>
-    
-    
+        <div id="smart-button-container">
+            <div style="text-align: center;">
+              <div id="paypal-button-container"></div>
             </div>
-         
-            <div style="padding: 20px;  justify-content: center; align-items: center;" >
-                <h4 style="display: flex; justify-content: center; align-items: center; ">Pix</h4>
-                <img  src="qrcode.png"  width="100" height="100" >
-               
-            </div>
-            
+
+
+        </div>
+     
+        <div style="padding: 20px;  justify-content: center; align-items: center;" >
+            <h4 style="display: flex; justify-content: center; align-items: center; ">Pix</h4>
+            <img  src="qrcode.png"  width="100" height="100" >
+           
+        </div>
         
     
-            <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=BRL" data-sdk-integration-source="button-factory"></script>
-            <script>
-              function initPayPalButton() {
-                paypal.Buttons({
-                  style: {
-                    shape: 'pill',
-                    color: 'blue',
-                    layout: 'vertical',
-                    label: 'buynow',
-                    
-                  },
-          
-                  createOrder: function(data, actions) {
-                    return actions.order.create({
-                      purchase_units: [{"description":"e-book PLR","amount":{"currency_code":"BRL","value":70}}]
-                    });
-                  },
-          
-                  onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(orderData) {
-                      
-                      // Full available details
-                      console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-          
-                      // Show a success message within this page, e.g.
-                      const element = document.getElementById('paypal-button-container');
-                      element.innerHTML = '';
-                      element.innerHTML = '<h3>Thank you for your payment!</h3>';
-          
-                      // Or go to another URL:  actions.redirect('thank_you.html');
-                      
-                    });
-                  },
-          
-                  onError: function(err) {
-                    console.log(err);
-                  }
-                }).render('#paypal-button-container');
+
+        <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=BRL" data-sdk-integration-source="button-factory"></script>
+        <script>
+          function initPayPalButton() {
+            paypal.Buttons({
+              style: {
+                shape: 'pill',
+                color: 'blue',
+                layout: 'vertical',
+                label: 'buynow',
+                
+              },
+      
+              createOrder: function(data, actions) {
+                return actions.order.create({
+                  purchase_units: [{"description":"e-book Google ADS","amount":{"currency_code":"BRL","value":90}}]
+                });
+              },
+      
+              onApprove: function(data, actions) {
+                return actions.order.capture().then(function(orderData) {
+                  
+                  // Full available details
+                  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+      
+                  // Show a success message within this page, e.g.
+                  const element = document.getElementById('paypal-button-container');
+                  element.innerHTML = '';
+                  element.innerHTML = '<h3>Thank you for your payment!</h3>';
+      
+                  // Or go to another URL:  actions.redirect('thank_you.html');
+                  
+                });
+              },
+      
+              onError: function(err) {
+                console.log(err);
               }
-              initPayPalButton();
-            </script>
+            }).render('#paypal-button-container');
+          }
+          initPayPalButton();
+        </script>
+    
+             
+               
         
-                 
-    </section>
+  </section>
 </body>
 </html> 

@@ -7,7 +7,7 @@
 {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(42, 216, 94, 0.7),rgba(31, 212, 40, 0.7)),url(banner.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(banner.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -72,7 +72,7 @@ nav img{
 .text-box p{
     margin: 10px 0 40px;
     font-size: 14px;
-    color: #ffffff;
+    color: #fff;
 }
 .hero-btn{
     display: inline-block;
@@ -129,11 +129,11 @@ nav .fa{
     padding-top: 100px;
 }
 h1{
-    font-size: 45px;
+    font-size: 36px;
     font-weight: 600;
 }
 p{
-    color: #ca23b4;
+    color: #777;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
@@ -159,7 +159,7 @@ h3{
     margin: 10px 0;
 }
 .course-col:hover{
-    box-shadow: 0 0 20px 0px rgba(37, 230, 69, 0.2);
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 @media(max-width:700px){
     .row{
@@ -217,7 +217,7 @@ h3{
 }
 
 .facilities{
-    background:#e06fc8;
+    background:#e731cf;
     width: 100%;
     margin: auto;
     text-align: center;
@@ -225,11 +225,10 @@ h3{
   
 }
 .facilities h1{
-    color: #144ee0;
+    color: #fff;
 }
 .facilities p{
-    color: #390dd8;
-    font-size: 18px;
+    color: #fff;
 }
 .facilities-col{
     flex-basis: 31;
@@ -254,7 +253,7 @@ h3{
 .cta{
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(68, 212, 99, 0.7),rgba(35, 192, 29, 0.7)),url(banner2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(banner2.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -273,7 +272,7 @@ h3{
 }
 .footer
 {
-    background: #f16e84;
+    background: #ce103f;
     padding: 20px 100px;
     display: flex;
     justify-content: center;
@@ -319,6 +318,14 @@ h3{
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100vh;
     }
 }
