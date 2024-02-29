@@ -13,6 +13,9 @@
 </head>
 <body>
 <!--javaScript para togge menu-->
+    <script async
+        src="https://js.stripe.com/v3/buy-button.js">
+    </script>
     <script>
         var navLinks = document.getElementById("navLinks");
         function showMenu(){
@@ -34,26 +37,18 @@
              </div>
     </section>
     <!---footer-->
-    <section class="footer" id="fooder">
-          <div id="smart-button-container">
+  <section class="footer" id="fooder">
+         <div id="smart-button-container">
             <div class="whats" id="whats">
-                <div style="text-align: center;">
-                      <div id="paypal-button-container"></div>
-                </div>
-                <h5>Pix</h5>
-                <img  src="qrcode.png"  width="100" height="100" >
-                <a href="https://wa.me/5511986244329" target="_blank" >
-                <h6 style="display: flex; justify-content: flex-end; align-items: flex-end;"></h6>
-                <img src="whats5.jpeg" width="60" alt="Fale conosco" title="Fale conosco" >
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                  <input type="hidden" name="cmd" value="_s-xclick">
-                  <input type="hidden" name="hosted_button_id" value="AVDBF6T3B4HAA">
-                  <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
-                  <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
-                </form>
                 </a>
-            </div>
+                  <stripe-buy-button
+                  buy-button-id="buy_btn_1OpE8DJBGMeYcARublrGQPEz"
+                  publishable-key="pk_live_51OoaX8JBGMeYcARuPt0GENTJTtWjZZe5TF7r4KdQGNK1hiqvjY8NQiZtjXuyHsPnMRHCQIrTe3GcqVkCVX3bvveZ00UkJEtkTa"
+                     >
+                 </stripe-buy-button>
+                 </div>  
+               </div>   
         </div>
-    </section>
+  </section>
 </body>
 </html> 
